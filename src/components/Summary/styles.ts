@@ -4,7 +4,8 @@ export const SummaryContainer = styled.div`
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
-    padding: 0 1rem;
+
+    padding: 1rem 0;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -38,15 +39,4 @@ export const SummaryCard = styled.div<SummaryCardProps>`
         css`
             background-color: ${props.theme['green-700']};
         `}
-`
-
-interface PriceHighlightProps {
-    variant: 'income' | 'outcome'
-}
-
-export const PriceHighlight = styled.span<PriceHighlightProps>`
-    color: ${(props) =>
-        props.variant === 'income'
-            ? props.theme['green-300']
-            : props.theme['red-300']};
 `
